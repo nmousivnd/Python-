@@ -1,0 +1,26 @@
+Challenge : The given code takes 2 numbers as input and calls the static area() method of the Shape class, to output the area of the shape, which is equal to the height multiplied by the width.
+
+
+Code: 
+
+class Shape:
+    @staticmethod
+    def validate_numbers(width, height):
+        # Ensure the numbers are positive integers
+        return width > 0 and height > 0
+
+    @staticmethod
+    def area(width, height):
+        # Validate inputs
+        if not Shape.validate_numbers(width, height):
+            return "Invalid dimensions"
+        # Calculate the area
+        return width * height
+
+
+# Get input for width and height
+w = int(input())
+h = int(input())
+
+# Print the area or an error message
+print(Shape.area(w, h))
